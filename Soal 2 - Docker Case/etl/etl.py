@@ -23,6 +23,7 @@ async def main():
             async with httpx.AsyncClient() as aclient:
                 response = await aclient.post(api_url, params={"text": sentence})
 
+
                 response.raise_for_status()
 
                 print(response.json())
